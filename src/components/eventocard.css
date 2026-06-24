@@ -1,0 +1,128 @@
+/* Estilos generales de la tarjeta */
+.evento-card {
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.evento-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Etiqueta de tipo */
+.evento-etiqueta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.evento-icono {
+  font-size: 18px;
+}
+
+/* Estilos por tipo - CONCIERTO */
+.evento-concierto {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-left: 5px solid #764ba2;
+}
+
+.evento-concierto .evento-etiqueta {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+/* Estilos por tipo - TEATRO */
+.evento-teatro {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  border-left: 5px solid #f5576c;
+}
+
+.evento-teatro .evento-etiqueta {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+/* Estilos por tipo - EXPOSICIÓN */
+.evento-exposicion {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+  border-left: 5px solid #00f2fe;
+}
+
+.evento-exposicion .evento-etiqueta {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+/* Contenido de la tarjeta */
+.evento-contenido {
+  width: 100%;
+}
+
+.evento-nombre {
+  margin: 0 0 15px 0;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.evento-detalles {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.evento-lugar,
+.evento-duracion,
+.evento-descripcion {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.evento-descripcion {
+  font-style: italic;
+  opacity: 0.95;
+  margin-top: 8px;
+}
+
+.evento-fechas {
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.evento-fechas ul {
+  list-style: none;
+  padding: 8px 0 0 20px;
+  margin: 0;
+}
+
+.evento-fechas li {
+  margin: 5px 0;
+  padding-left: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .evento-card {
+    padding: 15px;
+  }
+
+  .evento-nombre {
+    font-size: 18px;
+  }
+
+  .evento-detalles {
+    gap: 10px;
+  }
+}
