@@ -1,0 +1,25 @@
+Etapa 1:proyecto base de datos 
+prompt:por favor has un reviso en general si detecta algu fallo en especifico 
+en el componente eventos.js y verifica si la consola funciona correctamente
+
+
+Etapa 2:aplicacion de eventos y visualizacion
+prompt:añade en este componente descripciones especificas a relacion con un evento 
+(recrea un situacion sobre un evento superficial y que informacin contendria,tipo y descripciones)
+de manera ordenada y que se diferencia del resto con esteticas visuales agradables 
+
+Etapa 3: renderizado con la lista con key
+prompt:asigna un prop key usando el id de dichos elementos y para asegurar haz un renderizado
+en el componente app.jsx para que se ejecute coorectamente
+
+Etapa 4:filtro y busqueda controlada en componentes de busqueda
+prompt:en el componente situado agrega items para interactuar con
+los eventos(conciert,teatro,etc) y finaliza con un renderizado que mencione que no coincida.
+
+
+Etapa 5:destacar elementos visuales y contadores:
+prompt:añade visuales resaltados con elementos de esgratuito , como los lineales y el las interfaces , y finalizando 
+con un contador para eventos gratuitos 
+
+
+mayormente me sirvio mucho aspecto ya que no situaba bien aplicar el renderizado , en el caso de los colores fue un aspecto mas facil 
