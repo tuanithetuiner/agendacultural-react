@@ -1,0 +1,62 @@
+.filtro-tipo-container {
+  background: var(--card-bg);
+  padding: 24px;
+  border-radius: 12px;
+  margin-bottom: 32px;
+  border: 1px solid var(--border);
+}
+
+.filtro-tipo-container h3 {
+  margin: 0 0 16px 0;
+  font-size: 18px;
+  color: var(--text-h);
+}
+
+.filtro-botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.filtro-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border: 2px solid var(--border);
+  background-color: var(--bg);
+  color: var(--text);
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.filtro-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.filtro-btn.activo {
+  background-color: var(--accent);
+  color: white;
+  border-color: var(--accent);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .filtro-tipo-container {
+    padding: 16px;
+    margin-bottom: 24px;
+  }
+
+  .filtro-botones {
+    gap: 8px;
+  }
+
+  .filtro-btn {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+}
