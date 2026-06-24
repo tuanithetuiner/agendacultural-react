@@ -1,6 +1,6 @@
 import './eventocard.css';
 
-export function EventoCard({ nombre, lugar, duracion, tipo, descripcion, fechas }) {
+export function EventoCard({ nombre, lugar, duracion, tipo, descripcion, fechas, esGratuito }) {
   // Determinar estilo y etiqueta según el tipo
   const estilosPorTipo = {
     Concierto: {
@@ -23,7 +23,10 @@ export function EventoCard({ nombre, lugar, duracion, tipo, descripcion, fechas 
   const estilos = estilosPorTipo[tipo] || estilosPorTipo.Concierto;
 
   return (
-    <div className={`evento-card ${estilos.clase}`}>
+    <div className={`evento-card ${estilos.clase} ${esGratuito ? 'evento-gratuito' : ''}`}>
+      {esGratuito && (
+        <div className="evento-badge-gratis">🎟️ GRATIS</div>
+      )}
       <div className="evento-etiqueta">
         <span className="evento-icono">{estilos.icono}</span>
         <span className="evento-tipo">{estilos.etiqueta}</span>

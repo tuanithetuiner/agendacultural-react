@@ -33,7 +33,10 @@ function App() {
     return cumpleTipo && cumpleBusqueda
   })
 
-  console.log(`Filtros aplicados - Tipo: ${tipoSeleccionado}, Búsqueda: "${busquedaNormalizada}" - Eventos encontrados: ${eventosFiltrados.length}`)
+  // Contar eventos gratuitos en los filtrados
+  const eventosGratuitos = eventosFiltrados.filter(evento => evento.esGratuito).length
+
+  console.log(`Filtros aplicados - Tipo: ${tipoSeleccionado}, Búsqueda: "${busquedaNormalizada}" - Eventos encontrados: ${eventosFiltrados.length} (Gratuitos: ${eventosGratuitos})`)
 
   return (
     <>
@@ -68,6 +71,13 @@ function App() {
           )}
         </div>
         <FiltroTipo tipoSeleccionado={tipoSeleccionado} onTipoChange={setTipoSeleccionado} />
+        
+        {eventosFiltrados.length > 0 && (
+          <div className="contador-gratuitos">
+            <span>🎟️ <strong>{eventosGratuitos}</strong> de <strong>{eventosFiltrados.length}</strong> eventos son gratuitos</span>
+          </div>
+        )}
+        
         {eventosFiltrados.length > 0 ? (
           <ListaEventos eventos={eventosFiltrados} />
         ) : (

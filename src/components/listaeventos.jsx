@@ -14,6 +14,7 @@ export function ListaEventos({ eventos }) {
             tipo={evento.tipo}
             descripcion={evento.descripcion}
             fechas={evento.fechas}
+            esGratuito={evento.esGratuito}
           />
         ))}
       </div>
