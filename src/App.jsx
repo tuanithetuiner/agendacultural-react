@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import { eventos } from './data/eventos'
-import { EventoCard } from './components/eventocard'
+import { ListaEventos } from './components/listaeventos'
 import './App.css'
 
 console.log('Eventos cargados:', eventos)
@@ -29,22 +29,7 @@ function App() {
 
       <div className="ticks"></div>
 
-      <section id="eventos-section">
-        <h2>Eventos Disponibles</h2>
-        <div className="eventos-grid">
-          {eventos.map((evento) => (
-            <EventoCard
-              key={evento.id}
-              nombre={evento.nombre}
-              lugar={evento.lugar}
-              duracion={evento.duracion}
-              tipo={evento.tipo}
-              descripcion={evento.descripcion}
-              fechas={evento.fechas}
-            />
-          ))}
-        </div>
-      </section>
+      <ListaEventos eventos={eventos} />
 
       <div className="ticks"></div>
       <section id="spacer"></section>
